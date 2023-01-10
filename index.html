@@ -35,7 +35,7 @@ required
         const chat = document.getElementById("chat");
         const ws = new WebSocket("ws://localhost:5500");
  ws.onmessage = (e) => {
-    // console.log(e.data);
+    
           const {name, message} = JSON.parse(e.data);
           chat.insertAdjacentHTML("beforeend", 
             `<p>
@@ -47,9 +47,9 @@ required
         const userNameForm = document.getElementById("user-name-form");
        userNameForm.addEventListener("submit", function (e) {
             e.preventDefault();
-            // console.log(this.elements.userName.value);
+           
             userName = this.elements.userName.value;
-            // console.log(userName);
+           
             this.remove();
         });
        const chatForm = document.getElementById("chat-form");
@@ -62,10 +62,7 @@ required
             <span class="your-chat-message">${message}</span>
             </p>`);
            this.reset();
-        // console.log({ 
-        //     name: userName,
-        //     message, 
-        // });
+        
         const data = {
             name: userName,
            message,
