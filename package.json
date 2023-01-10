@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "start:dev": "nodemon app.js"
+    "start:dev": "nodemon app.js",
+    "chat": "nodemon chat.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   },
   "homepage": "https://github.com/AndriiNahornyi/websocket-chat-example#readme",
   "dependencies": {
-    "ws": "^8.11.0"
+    "ws": "^8.12.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
